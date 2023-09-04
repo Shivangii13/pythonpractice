@@ -14,3 +14,23 @@ def accessElements(array,rowindex,colindex):
         print(array[rowindex][colindex])
 
 accessElements(twoDarray , 2 , 3)
+
+def traversetwoDarray(array):
+    for i in range(len(array)):
+        for j in range(len(array[0])):
+            print([i][j])
+
+
+#search in 2D array
+def searchtwoDarray(array , value):
+    for i in range(len(array)):
+        for j in range(len(array[0])):
+            if array[i][j] == value:
+                return  ' the element located in the index ' +str(i)+""+str(j)
+    return 'the elemnet is not found'    
+    
+print(searchtwoDarray(twoDarray,2 ))
+
+#deletion in 2D array
+newTDarray = np.delete(twoDarray ,0 ,axis=0)
+print(newTDarray)
