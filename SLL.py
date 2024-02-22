@@ -38,7 +38,28 @@ class SLL:
         while temp is not None:
             print(temp.item,end='')
             temp=temp.next
+    
+    def traverse(self):
+        current = self.head
+        while current is not None:
+            print(current.value)
+            current= current.next
 
+    def search(self , target):
+        current = self.head
+        while current:
+            if current.value == target:
+                return True
+            current = current.next
+        return False
+    
+    def get(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        current = self.head
+        for _ in range(index):
+            current = current.next
+        return current.value
             
 
            
